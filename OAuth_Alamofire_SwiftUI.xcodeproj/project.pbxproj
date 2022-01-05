@@ -7,18 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E406A552785606D00AE4286 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E406A542785606D00AE4286 /* RegisterView.swift */; };
+		3E406A572785619E00AE4286 /* MyProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E406A562785619E00AE4286 /* MyProfileView.swift */; };
+		3E406A5A278561DD00AE4286 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E406A59278561DD00AE4286 /* UserData.swift */; };
+		3E406A5D2785684F00AE4286 /* OtherUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E406A5C2785684F00AE4286 /* OtherUserProfileView.swift */; };
+		3E406A5F27856A6500AE4286 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E406A5E27856A6500AE4286 /* UserListView.swift */; };
 		3E90F25B27855AC10077F5C3 /* OAuth_Alamofire_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90F25A27855AC10077F5C3 /* OAuth_Alamofire_SwiftUIApp.swift */; };
 		3E90F25D27855AC10077F5C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90F25C27855AC10077F5C3 /* ContentView.swift */; };
 		3E90F25F27855AC30077F5C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E90F25E27855AC30077F5C3 /* Assets.xcassets */; };
 		3E90F26227855AC30077F5C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E90F26127855AC30077F5C3 /* Preview Assets.xcassets */; };
+		3E90F26927855C440077F5C3 /* MyNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90F26827855C430077F5C3 /* MyNavigationLink.swift */; };
+		3E90F26C27855E490077F5C3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E90F26B27855E490077F5C3 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E406A542785606D00AE4286 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		3E406A562785619E00AE4286 /* MyProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileView.swift; sourceTree = "<group>"; };
+		3E406A59278561DD00AE4286 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		3E406A5B2785637900AE4286 /* OAuth-Alamofire-SwiftUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "OAuth-Alamofire-SwiftUI-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3E406A5C2785684F00AE4286 /* OtherUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherUserProfileView.swift; sourceTree = "<group>"; };
+		3E406A5E27856A6500AE4286 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		3E90F25727855AC10077F5C3 /* OAuth_Alamofire_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OAuth_Alamofire_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E90F25A27855AC10077F5C3 /* OAuth_Alamofire_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth_Alamofire_SwiftUIApp.swift; sourceTree = "<group>"; };
 		3E90F25C27855AC10077F5C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3E90F25E27855AC30077F5C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E90F26127855AC30077F5C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3E90F26827855C430077F5C3 /* MyNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationLink.swift; sourceTree = "<group>"; };
+		3E90F26B27855E490077F5C3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E406A58278561C700AE4286 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3E406A59278561DD00AE4286 /* UserData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3E90F24E27855AC10077F5C3 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +74,10 @@
 		3E90F25927855AC10077F5C3 /* OAuth_Alamofire_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				3E406A5B2785637900AE4286 /* OAuth-Alamofire-SwiftUI-Info.plist */,
+				3E406A58278561C700AE4286 /* Model */,
+				3E90F26A27855E330077F5C3 /* View */,
 				3E90F25A27855AC10077F5C3 /* OAuth_Alamofire_SwiftUIApp.swift */,
-				3E90F25C27855AC10077F5C3 /* ContentView.swift */,
 				3E90F25E27855AC30077F5C3 /* Assets.xcassets */,
 				3E90F26027855AC30077F5C3 /* Preview Content */,
 			);
@@ -65,6 +90,20 @@
 				3E90F26127855AC30077F5C3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3E90F26A27855E330077F5C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3E90F25C27855AC10077F5C3 /* ContentView.swift */,
+				3E90F26B27855E490077F5C3 /* LoginView.swift */,
+				3E406A542785606D00AE4286 /* RegisterView.swift */,
+				3E406A562785619E00AE4286 /* MyProfileView.swift */,
+				3E406A5C2785684F00AE4286 /* OtherUserProfileView.swift */,
+				3E406A5E27856A6500AE4286 /* UserListView.swift */,
+				3E90F26827855C430077F5C3 /* MyNavigationLink.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +177,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E90F25D27855AC10077F5C3 /* ContentView.swift in Sources */,
+				3E406A5F27856A6500AE4286 /* UserListView.swift in Sources */,
+				3E406A552785606D00AE4286 /* RegisterView.swift in Sources */,
+				3E406A5D2785684F00AE4286 /* OtherUserProfileView.swift in Sources */,
+				3E406A5A278561DD00AE4286 /* UserData.swift in Sources */,
 				3E90F25B27855AC10077F5C3 /* OAuth_Alamofire_SwiftUIApp.swift in Sources */,
+				3E90F26C27855E490077F5C3 /* LoginView.swift in Sources */,
+				3E406A572785619E00AE4286 /* MyProfileView.swift in Sources */,
+				3E90F26927855C440077F5C3 /* MyNavigationLink.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,11 +318,13 @@
 				DEVELOPMENT_TEAM = BR8CN8N4Y6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "OAuth-Alamofire-SwiftUI-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,11 +349,13 @@
 				DEVELOPMENT_TEAM = BR8CN8N4Y6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "OAuth-Alamofire-SwiftUI-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
