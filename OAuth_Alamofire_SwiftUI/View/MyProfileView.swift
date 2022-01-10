@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @EnvironmentObject var userVM : UserVM
     @State var id: String = ""
     @State var name: String = ""
     @State var email: String = ""
@@ -62,6 +63,18 @@ struct ProfileView: View {
                     }
                 }
             }
+            .onAppear(perform: {
+                print(#fileID, #function, "called")
+                userVM.fetchCurrentUserInfo()
+            })
+            .onReceive(userVM.$loggedInUser, perform: { loggedInUser in
+                print(#fileID, #function, "called")
+                guard let user = loggedInUser else { return }
+                self.id = "\(user.id)"
+                self.name = user.name
+                self.email = user.email
+                self.avatar = user.avatar
+            })
         }.navigationTitle("내 프로필 화면")
     }
 }

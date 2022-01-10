@@ -8,9 +8,10 @@
 import Foundation
 
 struct TokenData: Codable {
-    let tokenType: String
-    let expiresIn: Int
-    let accessToken, refreshToken: String
+    let tokenType: String = ""
+    let expiresIn: Int = 0
+    let accessToken: String
+    let refreshToken: String
     
     enum Codingkeys: String, CodingKey {
         case tokenType = "token_type"

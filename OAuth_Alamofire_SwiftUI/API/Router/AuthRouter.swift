@@ -37,22 +37,22 @@ enum AuthRouter: URLRequestConvertible {
     
     var parameters: Parameters {
         switch self {
-        case let .register(name, email, password):
-            var params = Parameters()
-            params["name"] = name
-            params["email"] = email
-            params["password"] = password
-            return params
-            
         case let .login(email, password):
             var params = Parameters()
             params["email"] = email
             params["password"] = password
             return params
             
+        case .register(let name, let email, let password):
+            var params = Parameters()
+            params["name"] = name
+            params["email"] = email
+            params["password"] = password
+            return params
         case .tokenRefresh:
             var params = Parameters()
-//            params["refresh-token"] =
+            let tokenData = UserDefaultsManager.shared.getTokens()
+            params["refresh_token"] = tokenData.refreshToken
             return params
         }
     }
@@ -60,10 +60,8 @@ enum AuthRouter: URLRequestConvertible {
     func asURLRequest() throws -> URLRequest {
         let url = baseURL.appendingPathComponent(endPoint)
         var request = URLRequest(url: url)
-        
         request.method = method
         request.httpBody = try JSONEncoding.default.encode(request, with: parameters).httpBody
-        
         return request
     }
 }

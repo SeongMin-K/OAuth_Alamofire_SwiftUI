@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct LoginView: View {
+    @EnvironmentObject var userVM: UserVM
+    @Environment(\.dismiss) var dismiss
+    
+    @State fileprivate var shouldShowAlert: Bool = false
     @State var email: String = ""
     @State var password: String = ""
     
@@ -26,6 +30,15 @@ struct LoginView: View {
                     }, label: {
                         Text("로그인 하기")
                     })
+                }
+            }
+            .onReceive(userVM.loginSuccess, perform: {
+                print(#fileID, #function, "called")
+                self.shouldShowAlert = true
+            })
+            .alert("로그인이 완료되었습니다.", isPresented: $shouldShowAlert) {
+                Button("확인", role: .cancel) {
+                    self.dismiss()
                 }
             }
         }.navigationTitle("로그인 화면")

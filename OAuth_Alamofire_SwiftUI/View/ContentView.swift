@@ -13,19 +13,20 @@ struct ContentView: View {
             VStack {
                 Image(systemName: "lock.shield.fill")
                     .font(.system(size: 160))
+                    .foregroundColor(.gray)
                 Spacer().frame(height: 60)
                 NavigationLink(destination: LoginView(), label: {
-                    MyNavigationLink(name: "로그인", color: .blue)
+                    MyNavigationLink(name: "로그인", color: .green)
                 })
                 NavigationLink(destination: RegisterView(), label: {
-                    MyNavigationLink(name: "회원가입", color: .black)
+                    MyNavigationLink(name: "회원가입", color: .gray)
                 })
                 Spacer().frame(height: 40)
                 NavigationLink(destination: ProfileView(), label: {
-                    MyNavigationLink(name: "프로필", color: .purple)
+                    MyNavigationLink(name: "내 프로필", color: .blue)
                 })
                 NavigationLink(destination: UserListView(), label: {
-                    MyNavigationLink(name: "사용자 목록", color: .green)
+                    MyNavigationLink(name: "사용자 목록", color: .black)
                 })
                 Spacer()
             }
@@ -36,6 +37,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(UserVM())
     }
 }

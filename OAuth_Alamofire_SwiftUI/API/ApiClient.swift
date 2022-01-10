@@ -19,7 +19,7 @@ final class ApiClient {
     ])
     
     init() {
-        print(#fileID, #function, "called")
-        session = Session(interceptor: interceptors)
+        print("ApiClient - init() called")
+        session = Session(interceptor: interceptors, eventMonitors: monitors)
     }
 }
