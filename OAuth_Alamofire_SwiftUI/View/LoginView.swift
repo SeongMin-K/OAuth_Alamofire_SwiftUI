@@ -20,8 +20,15 @@ struct LoginView: View {
             Form {
                 Section(header: Text("로그인 정보"), content: {
                     TextField("이메일", text: $email)
+                        .placeholder(shouldShow: email.isEmpty, placeHolderText: {
+                            HStack {
+                                Text("이메일")
+                                Image(systemName: "square.and.pencil")
+                            }.foregroundColor(.green)
+                        })
                         .keyboardType(.emailAddress)
                         .autocapitalization(.none)
+                        .disableAutocorrection(true)
                     SecureField("비밀번호", text: $password)
                 })
                 Section {
@@ -47,6 +54,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView().environmentObject(UserVM())
     }
 }
